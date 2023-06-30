@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Application Form with Firebase Integration</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Form Submission</h2>
+        <form id="myForm" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" required></textarea><br><br>
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </div>
+    <div id="successMessage" class="hidden">
+        <p id="successText">Form submitted successfully</p>
+    </div>
+    <h2>User Data</h2>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>  
+    <div id="updatedetails" class="updatedetails">
+        <div class="update-content">
+            <span class="close" id="closeUpdateModal">&times;</span>
+            <h2>Update Details</h2>
+        </div>
+        <form action="" id="updateForm">
+            <input type="hidden" id="updateUserId">
+            <label for="updateName">Name:</label>
+            <input type="text" id="updateName" name="name" required>
+            <label for="updateEmail">Email:</label>
+            <input type="email" name="email" id="updateEmail" required>
+            <label for="updateMessage">Message:</label>
+            <textarea name="message" id="updateMessage" required></textarea>
+            <button type="submit">Update</button> 
+        </form>
+    </div> 
+</body>
+</html>
